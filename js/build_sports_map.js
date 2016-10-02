@@ -28,6 +28,7 @@ function buildMap(data) {
     //add markers to map for each
 
     //School icon from mapkey
+    //graciously borrowed from here: https://github.com/mapshakers/leaflet-mapkey-icon
     var mki = L.icon.mapkey({icon:"school", color:'#725139',background:'#f2c357',size:30});
     var thisSchool = {}; //Temp var to simplify indexing
     for (var i = 0; i < schoolsData.length; i++)
