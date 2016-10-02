@@ -26,12 +26,15 @@ function buildMap(data) {
 
     //Create a feature layer from all the high schools
     //add markers to map for each
+
+    //School icon from mapkey
+    var mki = L.icon.mapkey({icon:"school", color:'#725139',background:'#f2c357',size:30});
     var thisSchool = {}; //Temp var to simplify indexing
     for (var i = 0; i < schoolsData.length; i++)
     {
 	thisSchool = schoolsData[i];
-	var newMarker = L.marker([thisSchool.lat, thisSchool.long])
-	    .bindPopup(thisSchool.name);
+	var newMarker = L.marker([thisSchool.lat, thisSchool.long], {icon:mki})
+	    .bindPopup(thisSchool.School);
 	newMarker.addTo(map);
     }
 
