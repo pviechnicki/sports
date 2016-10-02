@@ -30,7 +30,6 @@ function buildMap(data) {
     for (var i = 0; i < schoolsData.length; i++)
     {
 	thisSchool = schoolsData[i];
-	console.log(i);
 	var newMarker = L.marker([thisSchool.lat, thisSchool.long])
 	    .bindPopup(thisSchool.name);
 	newMarker.addTo(map);
